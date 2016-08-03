@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Flood Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FloodMapViewController" customModule="HighWaters" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Mbn-sF-o3a">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Mbn-sF-o3a" secondAttribute="trailing" id="6T7-BD-xNN"/>
+                            <constraint firstItem="Mbn-sF-o3a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SN9-WU-C1e"/>
+                            <constraint firstItem="Mbn-sF-o3a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eIl-gW-h8k"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mbn-sF-o3a" secondAttribute="bottom" id="wpN-nZ-iSP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailView" destination="Ljp-lx-w57" id="Sbg-Wi-2R0"/>
+                        <outlet property="mapView" destination="Mbn-sF-o3a" id="IBC-eo-Dzx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Ljp-lx-w57">
+                    <rect key="frame" x="0.0" y="0.0" width="66" height="28"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bej-Hk-8jI">
+                            <rect key="frame" x="2" y="-2" width="62" height="30"/>
+                            <state key="normal" title="All Clear!"/>
+                            <connections>
+                                <action selector="deleteButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Ln-iW-MA4"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </objects>
+        </scene>
+    </scenes>
+</document>
